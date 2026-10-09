@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Gateway Timeout{% endblock %}
+{% block content %}
+<h1>504 &mdash; Gateway Timeout</h1>
+<div class="notice error" role="alert">
+  The server did not confirm your request in time. The outcome of the save is unknown.
+  Check the dashboard before trying again to avoid duplicate records.
+</div>
+<p><a href="/">Back to Dashboard</a></p>
+{% endblock %}

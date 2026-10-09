@@ -1,0 +1,22 @@
+INVOICE
+==========================================================
+Supplier:        Northwind Industrial Supplies LLP
+Address:         Unit 9, Peenya Industrial Estate, Bengaluru 560058, India
+
+Bill To:         CentrAlign Demo Company
+
+Invoice Number:  NIS-24519
+Issue Date:      25/09/2026
+Due Date:        25/10/2026
+Currency:        INR
+----------------------------------------------------------
+Line Items
+  1. Industrial safety gloves (nitrile)  500 x 62.00    =   31,000.00
+  2. Perforated cable trays 100mm         40 x 390.00   =   15,600.00
+  3. Freight and handling                                =    1,027.12
+----------------------------------------------------------
+Subtotal:                                    47,627.12
+GST @ 18%:                                    8,572.88
+TOTAL AMOUNT DUE:                       INR 56,200.00
+==========================================================
+Dates on this invoice are in DD/MM/YYYY format.

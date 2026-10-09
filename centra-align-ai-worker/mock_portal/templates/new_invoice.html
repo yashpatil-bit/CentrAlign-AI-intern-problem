@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}New Invoice{% endblock %}
+{% block content %}
+<h1>Record a New Invoice</h1>
+<p class="lead">All fields are required. Records are unique per company and invoice number.</p>
+
+{% if banner %}
+<div class="notice error" role="alert" id="form-errors">{{ banner }}</div>
+{% endif %}
+
+<form method="post" action="/invoices/new" class="card" novalidate>
+  {% for f in fields %}
+  <div class="field {% if f.error %}has-error{% endif %}">
+    <label for="{{ f.name }}">{{ f.label }}</label>
+    {% if f.name == "currency" %}
+    <select id="{{ f.name }}" name="{{ f.name }}" required
+            {% if f.help %}aria-describedby="{{ f.name }}-help"{% endif %}>
+      {% for c in currencies %}
+      <option value="{{ c }}" {% if f.value == c %}selected{% endif %}>{{ c }}</option>
+      {% endfor %}
+    </select>
+    {% else %}
+    <input id="{{ f.name }}" name="{{ f.name }}" type="text" value="{{ f.value }}" required
+           autocomplete="off"
+           {% if f.name in ("issue_date", "due_date") %}placeholder="YYYY-MM-DD"{% endif %}
+           {% if f.name == "amount" %}placeholder="0.00" inputmode="decimal"{% endif %}
+           {% if f.error %}aria-invalid="true"{% endif %}
+           aria-describedby="{% if f.help %}{{ f.name }}-help{% endif %}{% if f.error %} {{ f.name }}-error{% endif %}">
+    {% endif %}
+    {% if f.help %}<small id="{{ f.name }}-help" class="help">{{ f.help }}</small>{% endif %}
+    {% if f.error %}<p id="{{ f.name }}-error" class="field-error">{{ f.error }}</p>{% endif %}
+  </div>
+  {% endfor %}
+  <div class="actions">
+    <button type="submit">Save Invoice</button>
+    <a href="/" class="cancel">Cancel</a>
+  </div>
+</form>
+{% endblock %}

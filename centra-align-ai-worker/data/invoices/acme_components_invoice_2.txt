@@ -1,0 +1,26 @@
+TAX INVOICE
+==========================================================
+Supplier:        Acme Components Pvt Ltd
+Address:         Plot 42, MIDC Industrial Area, Bhosari, Pune 411026, India
+GSTIN:           27AACCA1234F1Z5
+
+Bill To:         CentrAlign Demo Company
+Address:         7th Floor, Orion Business Park, Baner, Pune 411045, India
+
+Invoice Number:  ACM-INV-2026-0412
+Issue Date:      2026-07-14
+Payment Terms:   Net 30
+Due Date:        2026-08-13
+Currency:        INR
+PO Reference:    CDC-PO-87650
+----------------------------------------------------------
+Line Items
+  1. Linear guide rails LGR-20           30 x 2,150.00  =   64,500.00
+  2. Jaw couplings JC-28                120 x 210.00    =   25,200.00
+  3. Freight and handling                                =    5,554.24
+----------------------------------------------------------
+Subtotal:                                    95,254.24
+GST @ 18%:                                   17,145.76
+TOTAL AMOUNT DUE:                     INR 1,12,400.00
+==========================================================
+Status note from Accounts Payable: received and filed.

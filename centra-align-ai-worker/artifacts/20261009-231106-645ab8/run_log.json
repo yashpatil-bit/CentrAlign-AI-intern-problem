@@ -1,0 +1,32 @@
+{
+  "request": "Find the latest invoice from Acme Components Pvt Ltd, extract the invoice number, amount, issue date, and due date, enter it into the internal Invoice Register, verify that the entry was saved correctly, and give me a summary.",
+  "policy": {
+    "allow_writes": true,
+    "dry_run": false
+  },
+  "task_id": "20261009-231106-645ab8",
+  "started_at": "2026-10-09T17:41:06+00:00",
+  "status": "Failed",
+  "current_step": 0,
+  "budget_used": 0,
+  "facts": {},
+  "actions": [],
+  "tool_outputs": [],
+  "decisions": [],
+  "errors": [],
+  "retries": [],
+  "files_read": [],
+  "form_submissions": [],
+  "blocked_writes": [],
+  "verification": null,
+  "verification_step": null,
+  "screenshots": [],
+  "finished": false,
+  "finish_rejections": 0,
+  "agent_outcome": null,
+  "final_summary": "",
+  "clarification_question": "",
+  "stop_reason": "llm_unavailable",
+  "fatal_error": "OpenAI rate limit or quota exceeded. Check your plan/billing and retry.",
+  "mode": "llm"
+}

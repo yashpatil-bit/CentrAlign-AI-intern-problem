@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Invoice Register{% endblock %} | CentrAlign Demo Company</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">CA</span>
+      <span>CentrAlign Demo Company &mdash; Invoice Register</span>
+    </div>
+    <nav aria-label="Main">
+      <a href="/">Dashboard</a>
+      <a href="/invoices/new">New Invoice</a>
+    </nav>
+  </header>
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="footer">Internal tool &middot; simulated environment &middot; fictional data only</footer>
+</body>
+</html>

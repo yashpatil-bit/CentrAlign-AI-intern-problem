@@ -1,0 +1,27 @@
+TAX INVOICE
+==========================================================
+Supplier:        Acme Components Pvt Ltd
+Address:         Plot 42, MIDC Industrial Area, Bhosari, Pune 411026, India
+GSTIN:           27AACCA1234F1Z5
+
+Bill To:         CentrAlign Demo Company
+Address:         7th Floor, Orion Business Park, Baner, Pune 411045, India
+
+Invoice Number:  ACM-INV-2026-0587
+Invoice Date:    18 September 2026
+Payment Terms:   Net 30
+Due Date:        18 October 2026
+Currency:        INR
+PO Reference:    CDC-PO-88214
+----------------------------------------------------------
+Line Items
+  1. Precision ball bearings 6204-2RS   400 x 145.00   =   58,000.00
+  2. Hydraulic gear pump HGP-3A          12 x 4,850.00  =   58,200.00
+  3. Freight and handling                                =    9,859.32
+----------------------------------------------------------
+Subtotal:                                  1,26,059.32
+GST @ 18%:                                   22,690.68
+TOTAL AMOUNT DUE:                     INR 1,48,750.00
+==========================================================
+Bank: State Bank of India, Pune Main Branch (details on file with Accounts Payable)
+Thank you for your business.

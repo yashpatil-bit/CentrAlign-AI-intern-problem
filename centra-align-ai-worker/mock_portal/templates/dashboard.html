@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<h1>CentrAlign Demo Company &mdash; Invoice Register</h1>
+<p class="lead">Supplier invoices recorded by Accounts Payable.</p>
+
+{% if created %}
+<div class="notice success" role="status">Invoice saved successfully as record #{{ created }}.</div>
+{% endif %}
+{% if fault_mode != "none" %}
+<div class="notice warning">Demo fault mode active: <strong>{{ fault_mode }}</strong></div>
+{% endif %}
+
+<div class="toolbar">
+  <h2>Recorded invoices ({{ invoices|length }})</h2>
+  <a class="button" href="/invoices/new">New Invoice</a>
+</div>
+
+{% if invoices %}
+<table class="records">
+  <caption class="sr-only">Recorded invoices</caption>
+  <thead>
+    <tr>
+      <th scope="col">Record ID</th>
+      <th scope="col">Company</th>
+      <th scope="col">Invoice Number</th>
+      <th scope="col">Issue Date</th>
+      <th scope="col" class="num">Amount</th>
+      <th scope="col">Currency</th>
+      <th scope="col">Due Date</th>
+      <th scope="col">Status</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for inv in invoices %}
+    <tr id="record-{{ inv.id }}" {% if created == inv.id %}class="highlight"{% endif %}>
+      <td>#{{ inv.id }}</td>
+      <td>{{ inv.company_name }}</td>
+      <td>{{ inv.invoice_number }}</td>
+      <td>{{ inv.issue_date }}</td>
+      <td class="num">{{ inv.amount }}</td>
+      <td>{{ inv.currency }}</td>
+      <td>{{ inv.due_date }}</td>
+      <td><span class="pill {{ inv.status|lower }}">{{ inv.status }}</span></td>
+      <td>
+        {% if inv.status != "Paid" %}
+        <form method="post" action="/invoices/{{ inv.id }}/mark-paid" class="inline">
+          <button type="submit" class="secondary" aria-label="Mark as Paid record {{ inv.id }}">Mark as Paid</button>
+        </form>
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p class="empty">No invoices recorded yet.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,7 @@
+TAX INVOICE
+Supplier:        Acme Components Pvt Ltd
+Invoice Number:  ACM-INV-2026-0602
+Issue Date:      2026-09-18
+Due Date:        2026-10-18
+Currency:        INR
+TOTAL AMOUNT DUE:                     INR 17,700.00
